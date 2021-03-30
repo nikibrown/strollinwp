@@ -1,22 +1,35 @@
 <?php get_header(); ?>
 
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
     <main>
+		<?php if( have_rows('homepage_hero') ): ?>
+    		<?php while( have_rows('homepage_hero') ): the_row(); 
+
+				// Get sub field values.
+				$homepage_hero_image = get_sub_field('homepage_hero_image');
+				$homepage_hero_left_image = get_sub_field('homepage_hero_left_image');
+				$homepage_hero_left_headline = get_sub_field('homepage_hero_left_headline'); 
+				$homepage_hero_left_text = get_sub_field('homepage_hero_left_text'); 
+				$homepage_hero_left_link_text = get_sub_field('homepage_hero_left_link_text'); 
+				$homepage_hero_left_link = get_sub_field('homepage_hero_left_link'); 
+		
+			?>
         <section class="section--photo-bleed-right">
 			<div class="left-content">
 				<img src="<?php bloginfo("template_url"); ?>/assets/img/strollin-logo-color.svg" alt="Strollin for the Colon" class="m-4" />
 			</div>
-			<div class="right-content" style="background-image: url(https://nikib.ro/wn/screenshots/homepage-photo2.jpg)"></div>
+			<div class="right-content" style="background-image: url(<?php echo esc_url( $homepage_hero_image['url'] ); ?>)"></div>
 		</section>
 
         <section class="section--half-half-extend">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-lg-6">
-						<img src="http://via.placeholder.com/100?text=Icon" class="float-left" />
-						<h3>Get Screened Today</h3>
+						<img src="<?php echo esc_url( $homepage_hero_left_image['url'] ); ?>" class="float-left" alt="<?php echo $homepage_hero_left_headline; ?>" />
+						<h3><?php echo $homepage_hero_left_headline; ?></h3>
 						<p>
-							Colon cancer is preventable, treatable & beatable. Get your screening done
-							today. <a href="#">Find a screening near me</a>
+							<?php echo $homepage_hero_left_text; ?> <a href="<?php echo $homepage_hero_left_link; ?>"><?php echo $homepage_hero_left_link_text;?></a>
 						</p>
 					</div>
 					<div class="col-lg-6 d-none d-lg-block">
@@ -31,6 +44,8 @@
 					</div>
 				</div>
 			</div>
+		    <?php endwhile; ?>
+<?php endif; ?>
 
 			<div class="mobile-content d-lg-none d-xl-none">
 				<div class="container">
@@ -118,6 +133,8 @@
 		</section>
 
     </main>
+
+<?php endwhile; endif; ?>
 
 <?php get_footer(); ?>
      
