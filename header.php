@@ -22,38 +22,55 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'strollin' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$strollin_description = get_bloginfo( 'description', 'display' );
-			if ( $strollin_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $strollin_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'strollin' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+
+
+<header>
+    <div class="container">
+        <nav class="navbar navbar-expand-xl">
+            <a style="width: 210px" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+				<img src="<?php bloginfo("template_url"); ?>/assets/img/strollin-logo-color.svg" alt="<?php bloginfo( 'name' ); ?>"/>
+			</a>
+            <button
+                class="navbar-toggler btn btn-primary"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <p>&#9776;</p>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="about.html">About Us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="tonis-race.html">Toni's Race</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="events.html">Events</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="sponsors.html">Sponsors / Volunteers</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Education</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="grants-awards.html">Grant & Awards</a>
+					</li>
+					<li class="">
+						<a class="btn btn-primary" href="#">Donate</a>
+					</li>
+				</ul>
+
+            </div>
+        </nav>
+    </div>
+</header>
+

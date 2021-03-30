@@ -1,0 +1,33 @@
+{
+	"name": "Strollin",
+	"version": "1.0.0",
+	"description": "Starter Project site",
+	"main": "index.html",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nikibrown/strollin.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/nikibrown/strollin/issues"
+	},
+	"homepage": "https://github.com/nikibrown/strollin",
+	"devDependencies": {
+		"bootstrap": "^4.6.0",
+		"browser-sync": "^2.26.13",
+		"gulp-file-include": "^2.3.0",
+		"gulp-postcss": "^8.0.0",
+		"gulp-sass": "^4.1.0",
+		"gulp-sass-bulk-import": "^1.0.1",
+		"gulp-sass-glob": "^1.1.0",
+		"gulp-useref": "^5.0.0",
+		"node-sass": "^4.13.0"
+	},
+	"dependencies": {
+		"gulp": "^4.0.2"
+	}
+}

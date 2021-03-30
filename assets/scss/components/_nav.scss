@@ -1,0 +1,66 @@
+.navbar {
+    padding: 0;
+    text-transform: uppercase;
+    @extend .align-items-start;
+
+    img {
+        height: auto;
+        max-width: 210px;
+    }
+}
+
+.navbar-toggler {
+    p {
+        margin-bottom: 0;
+    }
+
+    @include media-breakpoint-up(xl) {
+        display: none;
+    }
+}
+
+// spacing and li dividers for nav
+.navbar-expand-xl {
+    .navbar-nav {
+        margin-top: $base-spacing-unit;
+        @include media-breakpoint-up(xl) {
+            margin-top: 0;
+            .btn {
+                margin-left: 20px;
+            }
+
+            li {
+                .nav-link {
+                    color: $brand-dark-blue;
+                    padding-left: 0.625rem;
+                    padding-right: 0.625rem;
+                    position: relative;
+
+                    &:hover {
+                        color: $brand-blue;
+                        text-decoration: underline;
+                    }
+
+                    &:after {
+                        background-color: $blue;
+                        content: '';
+                        height: 16px;
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 1px;
+                    }
+                }
+
+                &:nth-last-child(2) {
+                    .nav-link {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

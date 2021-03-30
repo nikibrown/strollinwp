@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+$opensans: 'Open Sans', sans-serif;
+$font-family-base: $opensans;
+$font-size-base: 16px;
+$line-height-base: 1.5;
+$base-type-color: #262262;
+
+html,
+body {
+    color: $base-type-color;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+}
+
+pre {
+    font-family: Andale Mono;
+    background-color: #000;
+    border-radius: 6px;
+    color: #fff;
+    display: inline-block;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.styleguide-group {
+    border-bottom: 1px solid #999;
+    margin: $base-spacing-unit * 2 0;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.styleguide-image {
+    border: 1px solid #999;
+    border-radius: 6px;
+    display: block;
+    max-width: 300px;
+    margin-bottom: $base-spacing-unit;
+}
+
+h1,
+h2,
+h3,
+.lead,
+p {
+    line-height: $line-height-base;
+    margin-bottom: 1.25rem; // 20px/16px
+}
+
+li {
+    margin-bottom: 0.5rem; // 8px/16px
+}
+
+h1,
+.h1 {
+    font-size: 2.5rem; // 40px/16px
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h2,
+.h2 {
+    font-size: 1.75rem; // 28px/16px
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h3,
+.h3 {
+    font-size: 1.25rem; // 20px/16px
+    font-weight: 700; // bold
+    text-transform: uppercase;
+}
+
+.lead {
+    font-size: 1.25rem; // 20px/16px
+    font-weight: 400; // semibold
+}
+
+p {
+    font-size: 1rem; // 16px
+    font-weight: 400; // regular
+}

@@ -1,0 +1,29 @@
+footer {
+    @include addBorders($brand-med-blue);
+    @include sectionColor($brand-dark-blue);
+    @include sectionSpacing($spacing-sm);
+    @extend .text-white;
+
+    img {
+        height: auto;
+        max-width: 180px;
+    }
+
+    a {
+        color: $white;
+        &:hover {
+            color: rgba(255, 255, 255, 0.8);
+            img {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .fab {
+        font-size: 2.5rem;
+    }
+
+    .fas {
+        margin: 6px 10px 0 0;
+    }
+}

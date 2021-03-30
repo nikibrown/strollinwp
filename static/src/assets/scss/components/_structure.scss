@@ -1,0 +1,9 @@
+@include media-breakpoint-up(xl) {
+    .container,
+    .container-sm,
+    .container-md,
+    .container-lg,
+    .container-xl {
+        max-width: 1290px !important;
+    }
+}

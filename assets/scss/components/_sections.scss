@@ -1,0 +1,162 @@
+.section--dark-blue {
+    @include sectionColor($brand-dark-blue);
+    @include sectionSpacing($spacing-md);
+    @extend .text-white;
+}
+
+.section--blue {
+    @include sectionColor($brand-blue);
+    @include sectionSpacing($spacing-md);
+    @extend .text-white;
+}
+
+.section--purple {
+    @include addBorders($white);
+    @include sectionColor($brand-purple);
+    @include sectionSpacing($spacing-md);
+    @extend .text-white;
+}
+
+.section--two-col {
+    @include sectionSpacing($spacing-sm);
+}
+
+.section--three-col {
+    @include addBorders($white);
+}
+
+.section--white {
+    @extend .section--white;
+    @include sectionSpacing($spacing-md);
+}
+
+.section--photo-gallery {
+    @include sectionSpacing($spacing-md);
+
+    a {
+        &:hover {
+            img {
+                opacity: 0.9;
+            }
+        }
+    }
+}
+
+.section--photo-banner-large {
+    background-size: cover;
+    background-position: top center;
+    min-height: 430px;
+    @include media-breakpoint-up(xl) {
+        height: 500px;
+    }
+}
+
+.section--photo-banner-small {
+    background-size: cover;
+    background-position: top center;
+    min-height: 300px;
+    @include media-breakpoint-up(xl) {
+        height: 400px;
+    }
+}
+
+.section--half-half-extend {
+    background: $white;
+    padding: $base-spacing-unit * 2 0 0 0;
+
+    @include media-breakpoint-up(lg) {
+        background: linear-gradient(
+            90deg,
+            $white 0%,
+            $white 50%,
+            $brand-purple 50%,
+            $brand-purple 100%
+        );
+        @include sectionSpacing($spacing-md);
+    }
+
+    div[class*=' col'],
+    div[class^='col'] {
+        &:last-child {
+            @extend .text-white;
+        }
+    }
+
+    @include media-breakpoint-down(lg) {
+        div[class*=' col'],
+        div[class^='col'] {
+            &:last-child {
+                background-color: $brand-purple;
+            }
+        }
+    }
+
+    .mobile-content {
+        background-color: $brand-purple;
+        padding: $base-spacing-unit 0;
+    }
+}
+
+.section--half-half {
+    @include addBorders($brand-blue);
+    @include sectionSpacing($spacing-md);
+}
+
+.section--homepage-three-col {
+    @include addBorders($white);
+    @include sectionColor($brand-blue);
+    @include sectionSpacing($spacing-md);
+    @extend .text-white;
+}
+
+.add-borders-white {
+    @include addBorders($white);
+}
+
+.add-borders-dark-blue {
+    @include addBorders($brand-dark-blue);
+}
+
+.section--photo-bleed-right {
+    width: 100%;
+    @extend .d-flex;
+    @extend .flex-column;
+    @extend .flex-sm-column;
+    @extend .flex-lg-row;
+    @extend .flex-xl-row;
+    @extend .align-items-center;
+
+    .left-content {
+        @extend .d-flex;
+        @extend .align-items-center;
+        @extend .align-items-lg-end;
+        @extend .align-items-xl-end;
+        @extend .flex-column;
+        width: 100%;
+        @include media-breakpoint-up(lg) {
+            width: 50%;
+        }
+        img {
+            max-width: 455px;
+        }
+    }
+    .right-content {
+        background-size: cover;
+        background-position: top center;
+        @extend .d-flex;
+        height: 340px;
+        width: 100%;
+        @include media-breakpoint-up(lg) {
+            width: 50%;
+        }
+
+        @include media-breakpoint-up(xl) {
+            height: 500px;
+        }
+    }
+}
+
+.resource {
+    @include sectionSpacing($spacing-sm);
+    border-bottom: 1px solid $brand-blue;
+}
