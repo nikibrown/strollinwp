@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header("home"); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
@@ -12,8 +12,6 @@
 				$homepage_hero_left_headline = get_sub_field('homepage_hero_left_headline'); 
 				$homepage_hero_left_text = get_sub_field('homepage_hero_left_text'); 
 				$homepage_hero_left_link_text = get_sub_field('homepage_hero_left_link_text'); 
-				
-		
 			?>
         <section class="section--photo-bleed-right">
 			<div class="left-content">

@@ -19,10 +19,10 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">
-							<img src="<?php echo $image; ?>" alt="<?php the_title(); ?>" width="270px">
-							<p class="lead">
+							<img src="<?php echo $image; ?>" alt="<?php the_title(); ?>" style="width:270px; margin-bottom: 20px;">
+							<div class="lead">
 								<?php echo $content; ?>
-							</p>
+							</div>
 
 							<?php if( $cta_link ): ?>
 								<a href="<?php echo esc_url( $cta_link_url ); ?>" target="<?php echo esc_attr( $cta_link_target ); ?>" class="btn btn-secondary"><?php echo esc_html( $cta_link_text ); ?></a>
@@ -100,12 +100,6 @@
                 </div>
             </section>
 		<?php endwhile; endif; ?>
-
-
-
-
-
-
 
     </main>
 
