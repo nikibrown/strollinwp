@@ -183,3 +183,15 @@
     @include sectionSpacing($spacing-sm);
     border-bottom: 1px solid $brand-blue;
 }
+
+.sponsors-list {
+	column-count: 1;
+	margin-left: 0;
+	@include media-breakpoint-up(sm) {
+		column-count: 2;
+	}
+
+	@include media-breakpoint-up(lg) {
+		column-count: 3;
+	}
+}

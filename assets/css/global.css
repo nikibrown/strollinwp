@@ -7631,3 +7631,13 @@ footer {
 .resource {
   padding: 1.25rem 0;
   border-bottom: 1px solid #0071ce; }
+
+.sponsors-list {
+  column-count: 1;
+  margin-left: 0; }
+  @media (min-width: 576px) {
+    .sponsors-list {
+      column-count: 2; } }
+  @media (min-width: 992px) {
+    .sponsors-list {
+      column-count: 3; } }
