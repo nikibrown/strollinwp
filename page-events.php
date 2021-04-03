@@ -69,7 +69,6 @@
 				$photo_2 = get_sub_field('photo_2');
 				$photo_3 = get_sub_field('photo_3');
 				$photo_4 = get_sub_field('photo_4');
-
 			?>
 
 			<section class="section--white">
@@ -102,8 +101,6 @@
 				</div>
 			</section>
 		<?php endwhile; endif; ?>
-
-
     </main>
 
 <?php endwhile; endif; ?>
