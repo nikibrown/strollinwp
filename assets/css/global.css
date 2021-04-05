@@ -7350,8 +7350,12 @@ footer {
   footer img {
     height: auto;
     max-width: 180px; }
+  footer ul {
+    margin-left: 0; }
   footer a {
     color: #fff; }
+    footer a:visited {
+      color: #fff; }
     footer a:hover {
       color: rgba(255, 255, 255, 0.8); }
       footer a:hover img {
