@@ -44,22 +44,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="about.html">About Us</a>
+						<a class="nav-link" href="/about-us">About Us</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="tonis-race.html">Toni's Race</a>
+						<a class="nav-link" href="/tonis-race">Toni's Race</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="events.html">Events</a>
+						<a class="nav-link" href="/events">Events</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="sponsors.html">Sponsors / Volunteers</a>
+						<a class="nav-link" href="/sponsors-volunteers">Sponsors / Volunteers</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Education</a>
+						<a class="nav-link" href="/resources">Education</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="grants-awards.html">Grant & Awards</a>
+						<a class="nav-link" href="#">Grant & Awards</a>
 					</li>
 					<li class="">
 						<a class="btn btn-primary" href="#">Donate</a>
