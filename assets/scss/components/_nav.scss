@@ -7,6 +7,10 @@
         height: auto;
         max-width: 210px;
     }
+
+	
+
+	
 }
 
 .navbar-toggler {
@@ -62,5 +66,25 @@
                 }
             }
         }
+
+		li:not(.donate-btn) {
+			@extend .nav-item;
+
+			a {
+				@extend .nav-link;
+			}
+
+			
+		}
+
+		li.donate-btn {
+			a {
+				@extend .btn;
+				@extend .btn-primary;
+			}
+		}
     }
 }
+
+
+

@@ -1,3 +1,10 @@
+<?php
+/**
+* Template Name: Toni's Race
+*/ 
+?>
+
+
 <?php get_header("nothome"); ?>
 
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

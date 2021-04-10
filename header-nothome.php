@@ -42,30 +42,16 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="/about-us">About Us</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/tonis-race">Toni's Race</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/events">Events</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/sponsors-volunteers">Sponsors / Volunteers</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/resources">Education</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Grant & Awards</a>
-					</li>
-					<li class="">
-						<a class="btn btn-primary" href="#">Donate</a>
-					</li>
-				</ul>
 
+				<?php $defaults = array(
+					'menu' => 'Main Nav',
+					'container'       => '',
+					'fallback_cb'     => 'wp_page_menu',
+					'items_wrap'      => '<ul class="navbar-nav ml-auto">%3$s</ul>'				
+					);
+				?>
+
+				<?php wp_nav_menu( $defaults ); ?>
             </div>
         </nav>
     </div>
