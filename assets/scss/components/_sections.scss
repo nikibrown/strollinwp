@@ -1,6 +1,6 @@
 
 .section--dark {
-	a {
+	a:not(.btn) {
 		color: $white;
 		font-weight: 700;
 		&:hover {
@@ -11,7 +11,7 @@
 }
 
 .section--light {
-	a {
+	a:not(.btn) {
 		color: $brand-blue;
 		font-weight: 700;
 		&:hover {
@@ -140,44 +140,46 @@
     @include addBorders($brand-dark-blue);
 }
 
-.section--photo-bleed-right {
-    width: 100%;
-    @extend .d-flex;
-    @extend .flex-column;
-    @extend .flex-sm-column;
-    @extend .flex-lg-row;
-    @extend .flex-xl-row;
-    @extend .align-items-center;
+// .section--photo-bleed-right {
+//     width: 100%;
+//     @extend .d-flex;
+//     @extend .flex-column;
+//     @extend .flex-sm-column;
+//     @extend .flex-lg-row;
+//     @extend .flex-xl-row;
+//     @extend .align-items-center;
+// }
 
-    .left-content {
-        @extend .d-flex;
-        @extend .align-items-center;
-        @extend .align-items-lg-end;
-        @extend .align-items-xl-end;
-        @extend .flex-column;
-        width: 100%;
-        @include media-breakpoint-up(lg) {
-            width: 50%;
-        }
-        img {
-            max-width: 455px;
-        }
-    }
-    .right-content {
-        background-size: cover;
-        background-position: top center;
-        @extend .d-flex;
-        height: 340px;
-        width: 100%;
-        @include media-breakpoint-up(lg) {
-            width: 50%;
-        }
-
-        @include media-breakpoint-up(xl) {
-            height: 500px;
-        }
-    }
+.left-content {
+	@extend .d-flex;
+	@extend .align-items-center;
+	@extend .align-items-lg-end;
+	@extend .align-items-xl-end;
+	@extend .flex-column;
+	// width: 100%;
+	// @include media-breakpoint-up(lg) {
+	// 	width: 50%;
+	// }
+	img {
+		max-width: 455px;
+	}
 }
+.right-content {
+	background-size: cover;
+	background-position: top center;
+	// @extend .d-flex;
+	height: 340px;
+	// width: 100%;
+	// @include media-breakpoint-up(lg) {
+	// 	width: 50%;
+	// }
+
+	@include media-breakpoint-up(xl) {
+		height: 500px;
+	}
+
+}
+
 
 .resource {
     @include sectionSpacing($spacing-sm);

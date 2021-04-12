@@ -5,5 +5,9 @@
     .container-lg,
     .container-xl {
         max-width: 1290px !important;
+		section {
+			padding-left: $base-spacing-unit*2;
+			padding-right: $base-spacing-unit*2;
+		}
     }
 }

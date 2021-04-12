@@ -9,16 +9,16 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <main>
-
-		<?php if( have_rows('events_blue_section') ): while( have_rows('events_blue_section') ): the_row(); ?>
-
-			<?php 
-				$headline = get_sub_field('headline'); 
-				$content = get_sub_field('content');
-			?>
+		<div class="container">
 			
-			<section class="section--dark-blue">
-				<div class="container">
+			<?php if( have_rows('events_blue_section') ): while( have_rows('events_blue_section') ): the_row(); ?>
+
+				<?php 
+					$headline = get_sub_field('headline'); 
+					$content = get_sub_field('content');
+				?>
+				
+				<section class="section--dark-blue">
 					<div class="row">
 						<div class="col-sm-12">
 							<h2><?php echo $headline; ?></h2>
@@ -27,19 +27,18 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
-		<?php endwhile; endif; ?>
+				</section>
+			<?php endwhile; endif; ?>
 
-		<?php if( have_rows('events_section') ): while( have_rows('events_section') ): the_row(); ?>
+			<?php if( have_rows('events_section') ): while( have_rows('events_section') ): the_row(); ?>
 
-			<?php 
-				$headline = get_sub_field('headline');
-				$events = get_sub_field('events');
-			?>
+				<?php 
+					$headline = get_sub_field('headline');
+					$events = get_sub_field('events');
+				?>
 
-			<section class="section--white add-borders-dark-blue section--light">
-				<div class="container">
+					
+				<section class="section--white add-borders-dark-blue section--light">
 					<div class="row">
 						<div class="col-sm-12">
 							<h2><?php echo $headline; ?></h2>
@@ -60,25 +59,22 @@
 							</div>
 						<?php endwhile; endif; ?>
 					</div>
+				</section>
 
-				</div>
-			</section>
+			<?php endwhile; endif; ?>
 
-		<?php endwhile; endif; ?>
+			<?php if( have_rows('additional_content') ): while( have_rows('additional_content') ): the_row(); ?>
 
-		<?php if( have_rows('additional_content') ): while( have_rows('additional_content') ): the_row(); ?>
+				<?php 
+					$headline = get_sub_field('headline');
+					$content = get_sub_field('content');
+					$photo_1 = get_sub_field('photo_1');
+					$photo_2 = get_sub_field('photo_2');
+					$photo_3 = get_sub_field('photo_3');
+					$photo_4 = get_sub_field('photo_4');
+				?>
 
-			<?php 
-				$headline = get_sub_field('headline');
-				$content = get_sub_field('content');
-				$photo_1 = get_sub_field('photo_1');
-				$photo_2 = get_sub_field('photo_2');
-				$photo_3 = get_sub_field('photo_3');
-				$photo_4 = get_sub_field('photo_4');
-			?>
-
-			<section class="section--white">
-				<div class="container">
+				<section class="section--white">
 					<div class="row">
 						<div class="col-lg-6">
 							<img src="<?php echo $photo_1; ?>" alt="">
@@ -88,11 +84,9 @@
 							<?php echo $content; ?>
 						</div>
 					</div>
-				</div>
-			</section>
+				</section>
 
-			<section class="section--white">
-				<div class="container">
+				<section class="section--white">
 					<div class="row">
 						<div class="col-lg-4">
 							<img src="<?php echo $photo_2; ?>" alt="">
@@ -104,9 +98,9 @@
 							<img src="<?php echo $photo_3; ?>" alt="">
 						</div>
 					</div>
-				</div>
-			</section>
-		<?php endwhile; endif; ?>
+				</section>
+			<?php endwhile; endif; ?>
+		</div>
     </main>
 
 <?php endwhile; endif; ?>

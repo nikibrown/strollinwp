@@ -1,8 +1,11 @@
 footer {
-    @include addBorders($brand-med-blue);
-    @include sectionColor($brand-dark-blue);
-    @include sectionSpacing($spacing-sm);
-    @extend .text-white;
+    
+	section {
+		@include addBorders($brand-med-blue);
+		@include sectionColor($brand-dark-blue);
+		@include sectionSpacing($spacing-sm);
+		@extend .text-white;
+	}
 
     img {
         height: auto;

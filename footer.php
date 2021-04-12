@@ -12,8 +12,8 @@
 ?>
 
 
-	<footer>
-		<div class="container">
+	<footer class="container">
+		<section>
 			<div class="row">
 				<div class="col-lg-4 col-sm-12 align-self-center">
 					<a href="/index.html"><img src="<?php bloginfo("template_url"); ?>/assets/img/strollin-logo-white.svg" alt="Strollin for the Colon" /></a>
@@ -50,7 +50,7 @@
 					</ul>
 				</div>	
 			</div>
-		</div>
+		</section>
 	</footer>
 
 	<?php wp_footer(); ?>

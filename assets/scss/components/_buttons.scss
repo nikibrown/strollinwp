@@ -1,8 +1,12 @@
 .btn {
     border: none;
     border-radius: 5px;
+	color: $white !important;
     font-weight: 700;
     outline: none;
+	&:hover, &:visited {
+		color: $white;
+	}
 }
 
 .btn-primary {

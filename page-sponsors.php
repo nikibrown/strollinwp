@@ -9,18 +9,16 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <main>
-		<section class="section--dark-blue">
-			<div class="container">
+		<div class="container">
+			<section class="section--dark-blue">
 				<div class="row">
 					<div class="col-sm-12">
 						<h2><?php the_title(); ?></h2>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<section class="section--white">		
-			<div class="container">
+			<section class="section--white">		
 				<div class="row">
 					<div class="col-lg-12">
 						<h2>Featured Sponsors</h2>
@@ -32,11 +30,9 @@
 						</ul>
 					</div>
 				</div>
-			</div>
-		</section>		
+			</section>		
 
-		<section class="section--white">		
-			<div class="container">
+			<section class="section--white">		
 				<div class="row">
 					<div class="col-lg-12">
 						<h2>Curretn and Past Sponsors</h2>
@@ -48,9 +44,8 @@
 						</ul>
 					</div>
 				</div>
-			</div>
-		</section>		
-
+			</section>		
+		</div>
     </main>
 
 <?php endwhile; endif; ?>

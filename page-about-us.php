@@ -9,13 +9,12 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <main>
+		<div class="container">
 
-		<?php if( have_rows('about_us_blue_section') ): while( have_rows('about_us_blue_section') ): the_row(); ?>
+			<?php if( have_rows('about_us_blue_section') ): while( have_rows('about_us_blue_section') ): the_row(); ?>
 
-			<?php $intro_text = get_sub_field('intro_text');?>
-			
-			<section class="section--full section--dark-blue">
-				<div class="container">
+				<?php $intro_text = get_sub_field('intro_text');?>
+				<section class="section--full section--dark-blue">
 					<div class="row">
 						<div class="col-sm-12">
 							<h2><?php the_title(); ?></h2>
@@ -24,20 +23,19 @@
 							</p>
 						</div>
 					</div>
-				</div>
-			</section>
-		<?php endwhile; endif; ?>
+				</section>
+				
+			<?php endwhile; endif; ?>
 
-		<?php if( have_rows('about_us_purple_section') ): while( have_rows('about_us_purple_section') ): the_row(); ?>
+			<?php if( have_rows('about_us_purple_section') ): while( have_rows('about_us_purple_section') ): the_row(); ?>
 
-			<?php 
-				$photo = get_sub_field('photo');
-				$headline = get_sub_field('headline');
-				$content = get_sub_field('content');
-			?>
+				<?php 
+					$photo = get_sub_field('photo');
+					$headline = get_sub_field('headline');
+					$content = get_sub_field('content');
+				?>
 
-			<section class="section--three-col section--purple">
-				<div class="container">
+				<section class="section--three-col section--purple">
 					<div class="row align-items-center">
 						<div class="col-sm-12 col-lg-4">
 							<img src="<?php echo $photo; ?>" alt="<?php echo $headline; ?>" class="img-fluid d-block m-auto">
@@ -49,20 +47,18 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</section>
+				</section>
 
-		<?php endwhile; endif; ?>
+			<?php endwhile; endif; ?>
 
-		<?php if( have_rows('board_of_directors_section') ): while( have_rows('board_of_directors_section') ): the_row(); ?>
+			<?php if( have_rows('board_of_directors_section') ): while( have_rows('board_of_directors_section') ): the_row(); ?>
 
-			<?php 
-				$headline = get_sub_field('headline');
-				$board_members = get_sub_field('board_members');
-			?>
+				<?php 
+					$headline = get_sub_field('headline');
+					$board_members = get_sub_field('board_members');
+				?>
 
-			<section class="section--photo-gallery">
-                <div class="container">
+				<section class="section--photo-gallery">
                     <div class="row">
                         <div class="col-12">
                             <h3><?php echo $headline; ?></h3>
@@ -99,10 +95,10 @@
 							</div>
 						<?php endwhile; endif; ?>
                     </div>
-                </div>
-            </section>
+              	</section>
 
-		<?php endwhile; endif; ?>
+			<?php endwhile; endif; ?>
+		</div>
 
     </main>
 

@@ -23,8 +23,8 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<header>
-    <div class="container">
+<header class="container">
+    <section>
         <nav class="navbar navbar-expand-xl">
             <a style="width: 210px" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 				<img src="<?php bloginfo("template_url"); ?>/assets/img/strollin-logo-color.svg" alt="<?php bloginfo( 'name' ); ?>"/>
@@ -54,6 +54,6 @@
 				<?php wp_nav_menu( $defaults ); ?>
             </div>
         </nav>
-    </div>
+				</section>
 </header>
 
