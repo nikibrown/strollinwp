@@ -9,7 +9,7 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <main>
-		<div class="container">
+		<div class="container section--dark-blue">
 
 			<?php if( have_rows('sponsors_dark_blue_section') ): while( have_rows('sponsors_dark_blue_section') ): the_row(); ?>
 
@@ -18,7 +18,7 @@
 					$content = get_sub_field('content');
 				?>
 				
-				<section class="section--dark-blue">
+				<section>
 					<div class="row">
 						<div class="col-sm-12">
 							<h2><?php echo $headline; ?></h2>
@@ -29,7 +29,9 @@
 					</div>
 				</section>
 			<?php endwhile; endif; ?>
-
+		</div>
+		<div class="container section--blue">
+			
 			<?php if( have_rows('sponsors_light_blue_section') ): while( have_rows('sponsors_light_blue_section') ): the_row(); ?>
 
 				<?php 
@@ -42,7 +44,7 @@
 				?>
 
 
-				<section class="section--blue">			
+				<section>			
 					<div class="row">
 						<div class="col-lg-12">
 							<h2><?php echo $headline; ?></h2>
@@ -72,6 +74,9 @@
 					</div>
 				</section>
 			<?php endwhile; endif; ?>
+		</div>
+
+		<div class="container section--white">
 
 			<?php if( have_rows('volunteer_white_section') ): while( have_rows('volunteer_white_section') ): the_row(); ?>
 
@@ -85,7 +90,7 @@
 					$cta_link_target = $cta_link['target'] ? $cta_link['target'] : '_self';
 				?>
 
-				<section class="section--white">
+				<section>
 					<div class="row">
 						<div class="col-lg-6">
 							<img src="<?php echo $photo; ?>" class="img-fluid mx-auto d-block" alt="<?php echo $headline; ?>">
@@ -103,6 +108,9 @@
 					</div>
 				</section>
 			<?php endwhile; endif; ?>
+		</div>
+
+		<div class="container section--blue ">
 
 			<?php if( have_rows('sponsor_volunteer_light_blue_section') ): while( have_rows('sponsor_volunteer_light_blue_section') ): the_row(); ?>
 
@@ -124,7 +132,7 @@
 					$cta_button_2_target = $cta_button_2['target'] ? $cta_button_2['target'] : '_self';
 				?>
 
-				<section class="section--blue add-borders-white">
+				<section class="add-borders-white">
 					<div class="row">
 						<div class="col-lg-4">
 							<img src="http://placehold.it/330x275?text=Placeholder" class="img-fluid mx-auto d-block">

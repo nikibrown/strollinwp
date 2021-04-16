@@ -9,16 +9,19 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <main>
-		<div class="container">
-			<section class="section--dark-blue">
+		<div class="container section--dark-blue">
+			<section>
 				<div class="row">
 					<div class="col-sm-12">
 						<h2><?php the_title(); ?></h2>
 					</div>
 				</div>
 			</section>
+		</div>
 
-			<section class="section--white">		
+		<div class="container section--white">
+
+			<section>		
 				<div class="row">
 					<div class="col-lg-12">
 						<h2>Featured Sponsors</h2>
@@ -30,7 +33,7 @@
 						</ul>
 					</div>
 				</div>
-			</section>		
+			</section>	
 
 			<section class="section--white">		
 				<div class="row">

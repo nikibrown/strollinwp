@@ -9,13 +9,13 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <main>
-		<div class="container">
+		<div class="container section--dark-blue">
 			<?php if( have_rows('blue_section') ): while( have_rows('blue_section') ): the_row(); ?>
 				<?php 
 					$headline = get_sub_field('headline'); 
 					$content = get_sub_field('content'); 
 				?>
-				<section class="section--dark-blue">
+				<section>
 					<div class="row">
 						<div class="col-sm-12">
 							<h2><?php echo $headline ?></h2>
@@ -26,8 +26,9 @@
 					</div>
 				</section>
 			<?php endwhile; endif; ?>
+		</div>
 
-			
+		<div class="container section--white">
 			<?php if( have_rows('white_section') ): while( have_rows('white_section') ): the_row(); ?>
 
 				<?php 
@@ -36,7 +37,7 @@
 					$photo = get_sub_field('photo');
 				?>
 
-				<section class="section--white">
+				<section>
 					<div class="row">
 						<div class="col-lg-6">
 							<img src="<?php echo $photo; ?>" class="img-fluid mx-auto d-block" alt="<?php echo $headline; ?>">
@@ -48,7 +49,9 @@
 					</div>
 				</section>
 			<?php endwhile; endif; ?>
+		</div>
 
+		<div class="container section--blue ">
 			<?php if( have_rows('light_blue_section') ): while( have_rows('light_blue_section') ): the_row(); ?>
 
 				<?php 
@@ -59,7 +62,7 @@
 					$content_3 = get_sub_field('content_3');
 				?>
 
-				<section class="section--blue add-borders-white">
+				<section class="add-borders-white">
 					<div class="row">
 						<div class="col-lg-12">
 							<h3><?php echo $headline; ?></h3>
@@ -80,7 +83,9 @@
 					</div>
 				</section>
 			<?php endwhile; endif; ?>
+		</div>
 
+		<div class="container section--white">
 			<?php if( have_rows('white_section_2') ): while( have_rows('white_section_2') ): the_row(); ?>
 
 				<?php 
@@ -89,7 +94,7 @@
 					$photo_3 = get_sub_field('photo_3');
 				?>
 				
-				<section class="section--white">
+				<section>
 					<div class="row">
 						<div class="col-sm-12 col-lg-4">
 							<img src="<?php echo $photo_1; ?>" class="img-fluid mx-auto d-block mb-5 mb-lg-0" alt="<?php echo $headline; ?>">

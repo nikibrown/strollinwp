@@ -3,7 +3,7 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <main>
-		<div class="container">
+		<div class="container section--white">
 			<?php if( have_rows('homepage_hero') ): while( have_rows('homepage_hero') ): the_row(); 
 
 				// Get sub field values.
@@ -65,6 +65,14 @@
 
 			<?php endwhile; endif; ?>
 
+			<?php if( have_rows('homepage_photo_banner_section') ): while( have_rows('homepage_photo_banner_section') ): the_row(); ?>
+				<?php $homepage_photo_banner_image = get_sub_field('homepage_photo_banner_image'); ?>
+				
+				<section class="section--photo-banner-large" style="background-image: url(<?php echo esc_url( $homepage_photo_banner_image ); ?>)"></section>
+
+			<?php endwhile; endif; ?>
+
+
 
 			<?php if( have_rows('homepage_blue_section') ): while( have_rows('homepage_blue_section') ): the_row(); 
 
@@ -95,12 +103,7 @@
 				</section>
 			<?php endwhile; endif; ?>
 
-			<?php if( have_rows('homepage_photo_banner_section') ): while( have_rows('homepage_photo_banner_section') ): the_row(); ?>
-				<?php $homepage_photo_banner_image = get_sub_field('homepage_photo_banner_image'); ?>
-				
-				<section class="section--photo-banner-large" style="background-image: url(<?php echo esc_url( $homepage_photo_banner_image ); ?>)"></section>
-
-			<?php endwhile; endif; ?>
+			
 
 			<?php if( have_rows('homepage_white_section') ): while( have_rows('homepage_white_section') ): the_row(); ?>
 				<?php 
@@ -129,6 +132,8 @@
 					</div>
 				</section>
 			<?php endwhile; endif; ?>
+
+			
 		</div>
 
     </main>

@@ -26,10 +26,9 @@
 
 
 
-<header class="container">
+<header class="container section--white">
     <section>
         <nav class="navbar navbar-expand-xl">
-           
             <button
                 class="navbar-toggler btn btn-primary"
                 type="button"

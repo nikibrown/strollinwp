@@ -9,14 +9,13 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <main>
-		<div class="container">
-			
+		<div class="container section--dark-blue">
 			<?php if( have_rows('resources_blue_section') ): while( have_rows('resources_blue_section') ): the_row(); ?>
 				<?php 
 					$headline = get_sub_field('headline'); 
 					$content = get_sub_field('content'); 
 				?>
-				<section class="section--dark-blue">
+				<section>
 					<div class="row">
 						<div class="col-sm-12">
 							<h2>Resources: <?php echo $headline ?></h2>
@@ -27,8 +26,10 @@
 					</div>
 				</section>
 			<?php endwhile; endif; ?>
+		</div>
 
-			<section class="section--white section--light">
+		<div class="container section--white section--light">
+			<section>
 				<div class="row">
 					<div class="col-lg-12">
 						<?php if( have_rows('resources') ): while( have_rows('resources') ): the_row(); ?>

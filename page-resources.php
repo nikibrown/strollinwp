@@ -9,14 +9,14 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <main>
-		<div class="container">
+		<div class="container section--dark-blue">
 			
 			<?php if( have_rows('resources_blue_section') ): while( have_rows('resources_blue_section') ): the_row(); ?>
 				<?php 
 					$headline = get_sub_field('headline'); 
 					$content = get_sub_field('content'); 
 				?>
-				<section class="section--dark-blue">
+				<section>
 					<div class="row">
 						<div class="col-sm-12">
 							<h2><?php echo $headline ?></h2>
@@ -27,8 +27,9 @@
 					</div>
 				</section>
 			<?php endwhile; endif; ?>
+		</div>
 
-		
+		<div class="container section--white">
 			<?php if( have_rows('resources_white_section') ): while( have_rows('resources_white_section') ): the_row(); ?>
 
 				<?php 
@@ -41,7 +42,7 @@
 					$cta_link_target = $cta_link['target'] ? $cta_link['target'] : '_self';
 				?>
 
-				<section class="section--white">
+				<section>
 					<div class="row">
 						<div class="col-lg-6">
 							<img src="<?php echo $photo; ?>" class="img-fluid mx-auto d-block" alt="<?php echo $headline; ?>">
@@ -59,8 +60,9 @@
 					</div>
 				</section>
 			<?php endwhile; endif; ?>
+		</div>
 
-
+		<div class="container section--blue">
 			<?php if( have_rows('resources_light_blue_section') ): while( have_rows('resources_light_blue_section') ): the_row(); ?>
 
 				<?php 
@@ -73,7 +75,7 @@
 					$cta_link_target = $cta_link['target'] ? $cta_link['target'] : '_self';
 				?>
 
-				<section class="section--blue">
+				<section>
 					<div class="row">
 						<div class="col-lg-6">
 							<h2><?php echo $headline; ?></h2>
@@ -91,7 +93,10 @@
 					</div>
 				</section>
 			<?php endwhile; endif; ?>
+		</div>
 
+
+		<div class="container section--white">
 			<?php if( have_rows('resources_white_section_2') ): while( have_rows('resources_white_section_2') ): the_row(); ?>
 
 				<?php 
@@ -104,7 +109,7 @@
 					$cta_link_target = $cta_link['target'] ? $cta_link['target'] : '_self';
 				?>
 
-				<section class="section--white">
+				<section>
 					<div class="row">
 						<div class="col-lg-6">
 							<img src="<?php echo $photo; ?>" class="img-fluid mx-auto d-block" alt="<?php echo $headline; ?>">

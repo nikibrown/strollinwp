@@ -1,8 +1,9 @@
 footer {
+	@include sectionColor($brand-dark-blue);
     
 	section {
 		@include addBorders($brand-med-blue);
-		@include sectionColor($brand-dark-blue);
+		
 		@include sectionSpacing($spacing-sm);
 		@extend .text-white;
 	}

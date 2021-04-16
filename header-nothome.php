@@ -54,6 +54,6 @@
 				<?php wp_nav_menu( $defaults ); ?>
             </div>
         </nav>
-				</section>
+	</section>
 </header>
 

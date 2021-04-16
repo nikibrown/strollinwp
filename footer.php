@@ -22,14 +22,14 @@
 					<h3>Contact Us</h3>
 					<div class="d-flex">
 						<i class="fas fa-map-marker"></i> 
-						<p>Strollin' for the Colon<br />
-						PO Box 10545607<br />
-						Pittsford, NY 14534</p>
+						<p>Strollin' for the Colon<br /><br />
+							PO Box 1054<br />5607 Palmyra Road<br />Pittsford, NY 14534
+</p>
 					</div>
 
 					<div class="d-flex">
 						<i class="fas fa-envelope"></i>
-						<p> <a href="mailto:">email@email.com</a></p>
+						<p> <a href="mailto:StrollinfortheColon5k@gmail.com">StrollinfortheColon5k@gmail.com</a></p>
 					</div>
 				</div>
 				<div class="col-lg-4 col-sm-12">
@@ -40,9 +40,6 @@
 						</li>
 						<li class="list-inline-item">
 							<a href=""><i class="fab fa-instagram-square"></i></a>
-						</li>
-						<li class="list-inline-item">
-							<a href=""><i class="fab fa-linkedin"></i></a>
 						</li>
 						<li class="list-inline-item">
 							<a href=""><i class="fab fa-twitter-square"></i></a>

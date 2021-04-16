@@ -9,12 +9,10 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <main>
-		<div class="container">
-
+		<div class="container section--dark-blue">
 			<?php if( have_rows('about_us_blue_section') ): while( have_rows('about_us_blue_section') ): the_row(); ?>
-
 				<?php $intro_text = get_sub_field('intro_text');?>
-				<section class="section--full section--dark-blue">
+				<section>
 					<div class="row">
 						<div class="col-sm-12">
 							<h2><?php the_title(); ?></h2>
@@ -26,7 +24,9 @@
 				</section>
 				
 			<?php endwhile; endif; ?>
+		</div>
 
+		<div class="container  section--purple">
 			<?php if( have_rows('about_us_purple_section') ): while( have_rows('about_us_purple_section') ): the_row(); ?>
 
 				<?php 
@@ -35,7 +35,7 @@
 					$content = get_sub_field('content');
 				?>
 
-				<section class="section--three-col section--purple">
+				<section class="section--three-col">
 					<div class="row align-items-center">
 						<div class="col-sm-12 col-lg-4">
 							<img src="<?php echo $photo; ?>" alt="<?php echo $headline; ?>" class="img-fluid d-block m-auto">
@@ -50,6 +50,9 @@
 				</section>
 
 			<?php endwhile; endif; ?>
+		</div>
+
+		<div class="container section--white section--light">
 
 			<?php if( have_rows('board_of_directors_section') ): while( have_rows('board_of_directors_section') ): the_row(); ?>
 
@@ -82,6 +85,8 @@
 											</button>
 										</div>
 										<div class="modal-body">
+											<img src="<?php echo $board_member_photo; ?>" alt="<?php echo $board_member_name; ?>" class="float-left" style="height: auto; width: 150px;">
+
 											<?php echo $board_member_bio; ?>
 										</div>
 									</div>
@@ -90,6 +95,7 @@
 
 							<div class="col-lg-3 col-sm-6">
 								<a href="#" data-toggle="modal" data-target="#modal<?php echo get_row_index(); ?>">
+									<p><?php echo $board_member_name; ?></p>
 									<img src="<?php echo $board_member_photo; ?>" alt="<?php echo $board_member_name; ?>" class="img-fluid d-block mb-5 mr-auto ml-auto">
 								</a>
 							</div>

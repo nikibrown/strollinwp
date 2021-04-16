@@ -9,7 +9,7 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <main>
-		<div class="container">
+		<div class="container section--dark-blue">
 			
 			<?php if( have_rows('events_blue_section') ): while( have_rows('events_blue_section') ): the_row(); ?>
 
@@ -18,7 +18,7 @@
 					$content = get_sub_field('content');
 				?>
 				
-				<section class="section--dark-blue">
+				<section>
 					<div class="row">
 						<div class="col-sm-12">
 							<h2><?php echo $headline; ?></h2>
@@ -29,6 +29,8 @@
 					</div>
 				</section>
 			<?php endwhile; endif; ?>
+		</div>
+		<div class="container section--white ">
 
 			<?php if( have_rows('events_section') ): while( have_rows('events_section') ): the_row(); ?>
 
@@ -38,7 +40,7 @@
 				?>
 
 					
-				<section class="section--white add-borders-dark-blue section--light">
+				<section class="add-borders-dark-blue section--light">
 					<div class="row">
 						<div class="col-sm-12">
 							<h2><?php echo $headline; ?></h2>
@@ -63,6 +65,11 @@
 
 			<?php endwhile; endif; ?>
 
+		</div>
+
+		
+
+
 			<?php if( have_rows('additional_content') ): while( have_rows('additional_content') ): the_row(); ?>
 
 				<?php 
@@ -73,11 +80,12 @@
 					$photo_3 = get_sub_field('photo_3');
 					$photo_4 = get_sub_field('photo_4');
 				?>
+			<div class="container section--blue">
 
-				<section class="section--white">
+				<section>
 					<div class="row">
 						<div class="col-lg-6">
-							<img src="<?php echo $photo_1; ?>" alt="">
+							<img src="<?php echo $photo_1; ?>" alt="" class="img-fluid mx-auto d-block mb-4 mb-lg-0">
 						</div>
 						<div class="col-lg-6">
 							<h2><?php echo $headline; ?></h2>
@@ -85,17 +93,20 @@
 						</div>
 					</div>
 				</section>
+			</div>
 
-				<section class="section--white">
+			<div class="container section--white">
+
+				<section>
 					<div class="row">
 						<div class="col-lg-4">
-							<img src="<?php echo $photo_2; ?>" alt="">
+							<img src="<?php echo $photo_2; ?>" alt="" class="img-fluid mx-auto d-block mb-4 mb-lg-0">
 						</div>
 						<div class="col-lg-4">
-							<img src="<?php echo $photo_3; ?>" alt="">
+							<img src="<?php echo $photo_3; ?>" alt="" class="img-fluid mx-auto d-block mb-4 mb-lg-0">
 						</div>
 						<div class="col-lg-4">
-							<img src="<?php echo $photo_3; ?>" alt="">
+							<img src="<?php echo $photo_4; ?>" alt="" class="img-fluid mx-auto d-block mb-4 mb-lg-0">
 						</div>
 					</div>
 				</section>
