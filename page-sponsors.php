@@ -38,6 +38,21 @@
 			<section class="section--white">		
 				<div class="row">
 					<div class="col-lg-12">
+						<h2>Top Individual Sponsors</h2>
+						<ul class="sponsors-list">
+							<?php if( have_rows('top_individual_sponsors') ): while( have_rows('top_individual_sponsors') ): the_row(); ?>
+								<?php $individual_sponsor = get_sub_field('individual_sponsor'); ?>
+								<li><?php echo $individual_sponsor; ?></li>
+							<?php endwhile; endif; ?>
+						</ul>
+					</div>
+				</div>
+			</section>		
+
+
+			<section class="section--white">		
+				<div class="row">
+					<div class="col-lg-12">
 						<h2>Current and Past Sponsors</h2>
 						<ul class="sponsors-list">
 							<?php if( have_rows('sponsors') ): while( have_rows('sponsors') ): the_row(); ?>
