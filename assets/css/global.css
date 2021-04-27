@@ -7486,10 +7486,10 @@ body {
   margin: 0;
   padding: 0; }
 
-.section--dark a:not(.btn) {
+.section--dark a:not(.btn), .section--dark-blue a:not(.btn), .section--blue a:not(.btn), .section--purple a:not(.btn) {
   color: #fff;
   font-weight: 700; }
-  .section--dark a:not(.btn):hover {
+  .section--dark a:not(.btn):hover, .section--dark-blue a:not(.btn):hover, .section--blue a:not(.btn):hover, .section--purple a:not(.btn):hover {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: underline; }
 
@@ -7499,10 +7499,10 @@ body {
 .section--last {
   padding-bottom: 0 !important; }
 
-.section--light a:not(.btn) {
+.section--light a:not(.btn), .section--white a:not(.btn) {
   color: #0071ce;
   font-weight: 700; }
-  .section--light a:not(.btn):hover {
+  .section--light a:not(.btn):hover, .section--white a:not(.btn):hover {
     color: #003968;
     text-decoration: underline; }
 
