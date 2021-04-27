@@ -67,7 +67,7 @@
 					<div class="row">
 
 						<div class="col-lg-6">
-							<h3><?php echo $headline; ?></h3>
+							<h2><?php echo $headline; ?></h2>
 							<?php echo $intro_text; ?>
 							<br />
 							<br />

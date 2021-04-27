@@ -18,7 +18,7 @@
 				<section>
 					<div class="row">
 						<div class="col-sm-12">
-							<h2>Resources: <?php echo $headline ?></h2>
+							<h2><?php echo $headline ?></h2>
 							<div class="lead">
 								<?php echo $content ?>
 							</div>

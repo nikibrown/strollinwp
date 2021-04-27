@@ -124,8 +124,8 @@
 					$content_2 = get_sub_field('content_2');
 				?>
 
-				<section class="section--half-half section--light">
-					<div class="row align-items-center">
+				<section class="section--half-half section--light section--last">
+					<div class="row">
 						<div class="col-lg-6">
 							<div class="d-flex">
 								<div class="img-container">

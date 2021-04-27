@@ -32,7 +32,7 @@
 							</div>
 
 							<?php if( $cta_link ): ?>
-								<a href="<?php echo esc_url( $cta_link_url ); ?>" target="<?php echo esc_attr( $cta_link_target ); ?>" class="btn btn-secondary"><?php echo esc_html( $cta_link_text ); ?></a>
+								<a href="<?php echo esc_url( $cta_link_url ); ?>" target="<?php echo esc_attr( $cta_link_target ); ?>" class="btn btn-dark"><?php echo esc_html( $cta_link_text ); ?></a>
 							<?php endif; ?>
 						</div>
 					</div>
