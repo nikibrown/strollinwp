@@ -57,29 +57,40 @@
 				<?php 
 					$headline = get_sub_field('headline');
 					$intro_text = get_sub_field('intro_text');
-					$content_1 = get_sub_field('content_1');
-					$content_2 = get_sub_field('content_2');
-					$content_3 = get_sub_field('content_3');
+					$photo = get_sub_field('photo');
+					
 				?>
 
-				<section class="add-borders-white">
+				<section>
+					
+
 					<div class="row">
-						<div class="col-lg-12">
+
+						<div class="col-lg-6">
 							<h3><?php echo $headline; ?></h3>
 							<?php echo $intro_text; ?>
-						</div>
-					</div>
+							<br />
+							<br />
 
-					<div class="row mt-5">
-						<div class="col-sm-12 col-lg-4">
-							<?php echo $content_1; ?>
+
+							<ul>
+							<?php if( have_rows('grants_awards') ): while( have_rows('grants_awards') ): the_row(); ?>
+
+							<?php 
+								$grant__award_text = get_sub_field('grant__award_text'); ?>
+
+								<li><?php echo $grant__award_text; ?></li>
+							<?php endwhile; endif; ?>
+							</ul>
+
 						</div>
-						<div class="col-sm-12 col-lg-4">
-							<?php echo $content_2; ?>
+
+						<div class="col-lg-6">
+							<img src="<?php echo $photo; ?>" class="img-fluid mx-auto d-block" alt="<?php echo $headline; ?>">
 						</div>
-						<div class="col-sm-12 col-lg-4">
-							<?php echo $content_3; ?>
-						</div>
+
+					
+						
 					</div>
 				</section>
 			<?php endwhile; endif; ?>

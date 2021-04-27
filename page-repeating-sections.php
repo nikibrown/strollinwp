@@ -31,7 +31,24 @@
 		<div class="container section--white section--light">
 			<section>
 				<div class="row">
-					<div class="col-lg-12">
+					
+					<?php if( have_rows('photos') ): ?>
+						<div class="col-lg-3">
+							
+							<?php while( have_rows('photos') ): the_row(); ?>
+								<?php 
+								$photo = get_sub_field('photo'); ?>
+								<img src="<?php echo $photo ?>" class="img-fluid mb-4 mx-auto d-block">
+
+							<?php endwhile; ?>
+						</div>
+					<?php endif; ?>
+					<?php if( have_rows('photos') ) { ?>
+						<div class="col-lg-9">
+					<?php } else { ?>
+						<div class="col-lg-12">
+					<?php } ?>
+						
 						<?php if( have_rows('resources') ): while( have_rows('resources') ): the_row(); ?>
 
 							<?php 
@@ -40,12 +57,18 @@
 								$url = get_sub_field('url');
 							?>
 						
-							<h3><?php echo $headline; ?></h3>
-							<?php echo $content; ?>
+							<?php if ($headline): ?>
+								<h3><?php echo $headline; ?></h3>
+							<?php endif; ?>
+							<?php if ($content): ?>
+								<?php echo $content; ?>
+							<?php endif; ?>
 
-							<a href="<?php echo $url; ?>" target="_blank">
-								<?php echo $url; ?>
-							</a>
+							<?php if ($url): ?>
+								<a href="<?php echo $url; ?>" target="_blank">
+									<?php echo $url; ?>
+								</a>
+							<?php endif; ?>
 
 							<hr>
 

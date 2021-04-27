@@ -3,10 +3,9 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <main>
-		<div class="container section--white">
+		<div class="container section--white section--first">
 			<?php if( have_rows('homepage_hero') ): while( have_rows('homepage_hero') ): the_row(); 
 
-				// Get sub field values.
 				$homepage_hero_image = get_sub_field('homepage_hero_image');
 				$homepage_hero_left_image = get_sub_field('homepage_hero_left_image');
 				$homepage_hero_left_headline = get_sub_field('homepage_hero_left_headline'); 
@@ -39,11 +38,21 @@
 				<section class="section--half-half-extend">
 					<div class="row align-items-center section--light">
 						<div class="col-lg-6">
-							<img src="<?php echo esc_url( $homepage_hero_left_image); ?>" class="float-left" alt="<?php echo $homepage_hero_left_headline; ?>" />
-							<h3><?php echo $homepage_hero_left_headline; ?></h3>
-							<p>
-								<?php echo $homepage_hero_left_text; ?> <a href="<?php the_sub_field('homepage_hero_left_link'); ?>"><?php echo $homepage_hero_left_link_text;?></a>
-							</p>
+							<div class="d-flex">
+								<div class="img-container">
+									<img src="<?php echo esc_url( $homepage_hero_left_image); ?>" class="mr-4" alt="<?php echo $homepage_hero_left_headline; ?>" />
+								</div>
+								<div class="content-container">
+									<h3><?php echo $homepage_hero_left_headline; ?></h3>
+									<p>
+										<?php echo $homepage_hero_left_text; ?> <a href="<?php the_sub_field('homepage_hero_left_link'); ?>"><?php echo $homepage_hero_left_link_text;?></a>
+									</p>
+								</div>
+							</div>
+						
+							
+							
+							
 						</div>
 
 						<div class="col-lg-6 d-none d-lg-block section--dark">
@@ -118,16 +127,29 @@
 				<section class="section--half-half section--light">
 					<div class="row align-items-center">
 						<div class="col-lg-6">
-							<img src="<?php echo esc_url( $photo_1); ?>" class="float-left" alt="<?php echo $headline_1; ?>" />
-							<h3><?php echo $headline_1; ?></h3>
-							<?php echo $content_1; ?>
+							<div class="d-flex">
+								<div class="img-container">
+									<img src="<?php echo esc_url( $photo_1); ?>" class="mr-4" alt="<?php echo $headline_1; ?>" />
+								</div>
+								
+								<div class="content-container">
+									<h3><?php echo $headline_1; ?></h3>
+									<?php echo $content_1; ?>
+								</div>
+							</div>
 						</div>
 						<div class="col-lg-6">
-							<img src="<?php echo esc_url( $photo_2); ?>" class="float-left" alt="<?php echo $headline_2; ?>" />
-							<h3><?php echo $headline_2; ?></h3>
-							<blockquote>
-								<?php echo $content_2; ?>
-							</blockquote>
+							<div class="d-flex">
+								<div class="img-container">
+								<img src="<?php echo esc_url( $photo_2); ?>" class="mr-4" alt="<?php echo $headline_2; ?>" />
+								</div>
+								<div class="content-container">
+										<h3><?php echo $headline_2; ?></h3>
+									<blockquote>
+										<?php echo $content_2; ?>
+									</blockquote>
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>

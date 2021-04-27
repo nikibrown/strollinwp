@@ -95,8 +95,8 @@
 
 							<div class="col-lg-3 col-sm-6">
 								<a href="#" data-toggle="modal" data-target="#modal<?php echo get_row_index(); ?>">
-									<p><?php echo $board_member_name; ?></p>
-									<img src="<?php echo $board_member_photo; ?>" alt="<?php echo $board_member_name; ?>" class="img-fluid d-block mb-5 mr-auto ml-auto">
+									<img src="<?php echo $board_member_photo; ?>" alt="<?php echo $board_member_name; ?>" class="img-fluid d-block mr-auto ml-auto">
+									<p class="mt-3"><?php echo $board_member_name; ?></p>
 								</a>
 							</div>
 						<?php endwhile; endif; ?>

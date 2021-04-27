@@ -23,10 +23,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-
-
-
-<header class="container section--white">
+<header class="container">
     <section>
         <nav class="navbar navbar-expand-xl">
             <button

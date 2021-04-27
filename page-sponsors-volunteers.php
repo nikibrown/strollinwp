@@ -56,8 +56,11 @@
 						</div>
 					</div>
 				</section>
+			</div>
+		
+			<div class="container section--white">
 
-				<section class="section--blue add-borders-white">
+				<section>
 					<div class="row">
 						<?php if( have_rows('sponsors') ): while( have_rows('sponsors') ): the_row(); ?>
 							<?php 
@@ -66,9 +69,9 @@
 							?>
 
 							<div class="col-lg-3">
-								<a href="<?php echo $sponsor_link; ?>" target="_blank">
+								<?php if( $sponsor_link ): ?><a href="<?php echo $sponsor_link; ?>" target="_blank"><?php endif; ?>	
 									<img src="<?php echo $sponsor_logo; ?>" class="img-fluid mx-auto d-block">
-								</a>
+								<?php if( $sponsor_link ): ?></a><?php endif; ?>	
 							</div>
 						<?php endwhile; endif; ?>
 					</div>
@@ -76,7 +79,7 @@
 			<?php endwhile; endif; ?>
 		</div>
 
-		<div class="container section--white">
+		<div class="container section--blue">
 
 			<?php if( have_rows('volunteer_white_section') ): while( have_rows('volunteer_white_section') ): the_row(); ?>
 
@@ -100,7 +103,7 @@
 							<?php echo $content; ?>
 
 							<?php if( $cta_link ): ?>
-								<a href="<?php echo esc_url( $cta_link_url ); ?>" target="<?php echo esc_attr( $cta_link_target ); ?>" class="btn btn-secondary">
+								<a href="<?php echo esc_url( $cta_link_url ); ?>" target="<?php echo esc_attr( $cta_link_target ); ?>" class="btn btn-dark">
 									<?php echo esc_html( $cta_link_text ); ?>
 								</a>
 							<?php endif; ?>	
@@ -110,46 +113,37 @@
 			<?php endwhile; endif; ?>
 		</div>
 
-		<div class="container section--blue ">
+		<div class="container section--white ">
 
 			<?php if( have_rows('sponsor_volunteer_light_blue_section') ): while( have_rows('sponsor_volunteer_light_blue_section') ): the_row(); ?>
 
 				<?php 
-					$photo = get_sub_field('photo');
+					$photo_1 = get_sub_field('photo_1');
+					$photo_2 = get_sub_field('photo_2');
 					$headline_1 = get_sub_field('headline_1');
 					$content_1 = get_sub_field('content_1');
-					$headline_2 = get_sub_field('headline_2');
-					$content_2 = get_sub_field('content_2');
 					
 					$cta_button_1 = get_sub_field('cta_button_1'); 
 					$cta_button_1_url = $cta_button_1['url'];
 					$cta_button_1_text = $cta_button_1['title'];
 					$cta_button_1_target = $cta_button_1['target'] ? $cta_button_1['target'] : '_self';
 					
-					$cta_button_2 = get_sub_field('cta_button_2'); 
-					$cta_button_2_url = $cta_button_2['url'];
-					$cta_button_2_text = $cta_button_2['title'];
-					$cta_button_2_target = $cta_button_2['target'] ? $cta_button_2['target'] : '_self';
 				?>
 
-				<section class="add-borders-white">
+				<section>
 					<div class="row">
 						<div class="col-lg-4">
-							<img src="http://placehold.it/330x275?text=Placeholder" class="img-fluid mx-auto d-block">
+							<img src="<?php echo $photo_1 ?>" class="img-fluid mx-auto d-block">
 						</div>
 						<div class="col-lg-4">
 							<h3><?php echo $headline_1; ?></h3>
 							<?php echo $content_1; ?>
-							<a href="<?php echo esc_url( $cta_button_1_url ); ?>" target="<?php echo esc_attr( $cta_button_1_target ); ?>" class="btn btn-dark">
+							<a href="<?php echo esc_url( $cta_button_1_url ); ?>" target="<?php echo esc_attr( $cta_button_1_target ); ?>" class="btn btn-secondary">
 								<?php echo esc_html( $cta_button_1_text ); ?>
 							</a>
 						</div>
 						<div class="col-lg-4">
-							<h3><?php echo $headline_2; ?></h3>
-							<?php echo $content_2; ?>
-								<a href="<?php echo esc_url( $cta_button_2_url ); ?>" target="<?php echo esc_attr( $cta_button_2_target ); ?>" class="btn btn-dark">
-								<?php echo esc_html( $cta_button_2_text ); ?>
-							</a>
+							<img src="<?php echo $photo_2 ?>" class="img-fluid mx-auto d-block">
 						</div>
 					</div>
 				</section>

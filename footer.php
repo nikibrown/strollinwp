@@ -16,7 +16,7 @@
 		<section>
 			<div class="row">
 				<div class="col-lg-4 col-sm-12 align-self-center">
-					<a href="/index.html"><img src="<?php bloginfo("template_url"); ?>/assets/img/strollin-logo-white.svg" alt="Strollin for the Colon" /></a>
+					<a href="/"><img src="<?php bloginfo("template_url"); ?>/assets/img/strollin-logo-white.svg" alt="Strollin for the Colon" /></a>
 				</div>
 				<div class="col-lg-4 col-sm-12">
 					<h3>Contact Us</h3>

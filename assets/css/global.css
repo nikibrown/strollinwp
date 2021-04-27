@@ -446,8 +446,8 @@ pre {
 .container-lg,
 .container-xl {
   width: 100%;
-  padding-right: 2.25rem;
-  padding-left: 2.25rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   margin-right: auto;
   margin-left: auto; }
 
@@ -470,8 +470,8 @@ pre {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -2.25rem;
-  margin-left: -2.25rem; }
+  margin-right: -1rem;
+  margin-left: -1rem; }
 
 .no-gutters {
   margin-right: 0;
@@ -489,8 +489,8 @@ pre {
 .col-xl-auto {
   position: relative;
   width: 100%;
-  padding-right: 2.25rem;
-  padding-left: 2.25rem; }
+  padding-right: 1rem;
+  padding-left: 1rem; }
 
 .col {
   flex-basis: 0;
@@ -3485,22 +3485,22 @@ input[type="button"].btn-block {
   border-bottom-left-radius: calc(0.25rem - 1px); }
 
 .card-deck .card {
-  margin-bottom: 2.25rem; }
+  margin-bottom: 1rem; }
 
 @media (min-width: 576px) {
   .card-deck {
     display: flex;
     flex-flow: row wrap;
-    margin-right: -2.25rem;
-    margin-left: -2.25rem; }
+    margin-right: -1rem;
+    margin-left: -1rem; }
     .card-deck .card {
       flex: 1 0 0%;
-      margin-right: 2.25rem;
+      margin-right: 1rem;
       margin-bottom: 0;
-      margin-left: 2.25rem; } }
+      margin-left: 1rem; } }
 
 .card-group > .card {
-  margin-bottom: 2.25rem; }
+  margin-bottom: 1rem; }
 
 @media (min-width: 576px) {
   .card-group {
@@ -7493,6 +7493,12 @@ body {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: underline; }
 
+.section--first {
+  padding-top: 0 !important; }
+
+.section--last {
+  padding-bottom: 0 !important; }
+
 .section--light a:not(.btn) {
   color: #0071ce;
   font-weight: 700; }
@@ -7708,14 +7714,16 @@ body {
 .right-content {
   background-size: cover;
   background-position: top center;
-  height: 340px;
-  margin-left: -4px;
-  margin-right: -4px; }
+  height: 300px;
+  margin-left: -24px;
+  margin-right: -24px; }
   @media (min-width: 992px) {
     .right-content {
-      height: 500px;
       margin-left: 0;
-      margin-right: -4px; } }
+      margin-right: -24px; } }
+  @media (min-width: 1200px) {
+    .right-content {
+      height: 400px; } }
 
 .resource {
   padding: 1.25rem 0;

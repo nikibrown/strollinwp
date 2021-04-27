@@ -38,7 +38,7 @@
 			<section class="section--white">		
 				<div class="row">
 					<div class="col-lg-12">
-						<h2>Curretn and Past Sponsors</h2>
+						<h2>Current and Past Sponsors</h2>
 						<ul class="sponsors-list">
 							<?php if( have_rows('sponsors') ): while( have_rows('sponsors') ): the_row(); ?>
 								<?php $sponsor = get_sub_field('sponsor'); ?>
