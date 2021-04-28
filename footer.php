@@ -42,7 +42,7 @@
 							<a href="https://instagram.com/StrollinForTheColon"><i class="fab fa-instagram-square"></i></a>
 						</li>
 						<li class="list-inline-item">
-							<a href="http://twitter.com/StrollinForTheColon"><i class="fab fa-twitter-square"></i></a>
+							<a href="http://twitter.com/StrollinForThe"><i class="fab fa-twitter-square"></i></a>
 						</li>
 					</ul>
 				</div>	
