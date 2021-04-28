@@ -36,13 +36,13 @@
 					<h3>Connect</h3>
 					<ul class="list-inline">
 						<li class="list-inline-item">
-							<a href=""><i class="fab fa-facebook-square"></i></a>
+							<a href="https://www.facebook.com/StrollinForTheColonGeneseoNY"><i class="fab fa-facebook-square"></i></a>
 						</li>
 						<li class="list-inline-item">
-							<a href=""><i class="fab fa-instagram-square"></i></a>
+							<a href="https://instagram.com/StrollinForTheColon"><i class="fab fa-instagram-square"></i></a>
 						</li>
 						<li class="list-inline-item">
-							<a href=""><i class="fab fa-twitter-square"></i></a>
+							<a href="http://twitter.com/StrollinForTheColon"><i class="fab fa-twitter-square"></i></a>
 						</li>
 					</ul>
 				</div>	
